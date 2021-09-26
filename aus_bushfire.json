@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Australia Bushfire 2019-2020",
+    "projection": {"type": "equirectangular"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/aus_state.json",
+          "format": {"type": "topojson", "feature": "gadm36_AUS_1"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}},
+        
+        {
+        "data": {
+            "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/fire_nrt_M6_96619.csv"
+            },
+            "mark": {"type": "circle", "color":"red"},
+            "encoding": {
+              "longitude": {"field": "longitude", "type": "quantitative"},
+              "latitude": {"field": "latitude", "type": "quantitative"},
+              "colour": {
+                "field": "brightness",
+                "type": "quantitative",
+                "scale": {"scheme": "reds"}
+              },
+              "tooltip": [
+                {"field": "brightness", "type": "quantitative", "title": "Temperature (K)"},
+                {"field": "acq_date", "type": "temporal", "title": "Date"},
+                {"field": "daynight", "type": "nominal", "title": "Day/Night"}
+              ]
+            }
+          }
+        ]
+      }
