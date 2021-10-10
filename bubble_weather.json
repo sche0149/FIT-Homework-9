@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Australia Weather 2019-2020",
+    "data": {
+        "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/aus_weather.csv"
+    },
+    "params":[
+        {
+            "name": "State_selection",
+            "bind":{
+                "input": "select",
+                "options":[
+                    null,
+                    "ACT",
+                    "NSW",
+                    "VIC",
+                    "QLD",
+                    "SA",
+                    "WA",
+                    "TAS",
+                    "NT"
+                ],
+                "name": "State Selection: "
+            }
+        }
+    ],
+    "transform":[
+        {
+            "filter": "State_selection == null || datum.State == State_selection"
+        }
+    ],
+    "mark": "circle",
+    "encoding": {
+    "x": {
+        "field": "Rain(mm)",
+        "type": "quantitative",
+        "title": "Rainfall (mm)"
+    },
+    "y": {
+        "field": "Max Temp",
+        "type": "quantitative",
+        "title": "Max Temperature (Celsius)"
+    },
+    "color": {
+        "field": "State",
+        "type": "nominal",
+        "scale": {
+            "domain":[
+                "ACT",
+                "NSW",
+                "VIC",
+                "QLD",
+                "SA",
+                "WA",
+                "TAS",
+                "NT"
+            ]
+        }
+    },
+    "size": {
+        "field": "Max wind gust Spd - km/h",
+        "type": "quantitative",
+        "title": "Wind Speed (km/h)"
+    },
+    "tooltip": [
+        {
+            "field": "State",
+            "type": "nominal"
+        },
+        {
+            "field": "Year",
+            "type": "temporal",
+            "title": "Date"
+        },
+        {
+            "field": "Max Temp",
+            "type": "quantitative",
+            "title": "Max Temperature (C)"
+        },
+        {
+            "field": "Rain(mm)",
+            "type": "quantitative",
+            "title": "Rainfall (mm)"
+        }
+    ]
+    }
+}
