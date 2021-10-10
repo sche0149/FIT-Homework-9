@@ -52,7 +52,9 @@
             "tooltip": [
             {"field": "brightness", "type": "quantitative", "title": "Temperature (K)"},
             {"field": "acq_date", "type": "temporal", "title": "Date"},
-            {"field": "daynight", "type": "nominal", "title": "Day/Night"}
+            {"field": "daynight", "type": "nominal", "title": "Day/Night"},
+            {"field": "latitude", "type": "quantitative", "title": "Latitude"},
+            {"field": "longitude", "type": "quantitative", "title": "Longitude"}    
             ]
         },
         "layer":[
