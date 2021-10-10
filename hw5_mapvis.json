@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Australia Bushfire 2019-2020",
+    "projection": {"type": "equirectangular"},
+    "params": [
+      {
+        "name": "Year_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "2019",
+            "2020"
+          ],
+          "labels":[
+            "Show All",
+            "2019",
+            "2020"
+          ],
+          "name": "Year: "
+        }
+      }
+    ],
+    "data": {
+        "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/fire_nrt_M6_96619.csv"
+        },
+    "layer":[
+        {
+        "data": {
+            "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/aus_state.json",
+            "format": {"type": "topojson", "feature": "gadm36_AUS_1"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+        "transform": [
+            {
+            "filter": "datum.Year == Year_selection"
+            } 
+        ],
+        "encoding": {
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "color": {
+            "field": "brightness",
+            "type": "quantitative",
+            "scale": {"scheme": "reds"},
+            "legend": {"title": "Flame Temperature (K)"}
+            },
+            "tooltip": [
+            {"field": "brightness", "type": "quantitative", "title": "Temperature (K)"},
+            {"field": "acq_date", "type": "temporal", "title": "Date"},
+            {"field": "daynight", "type": "nominal", "title": "Day/Night"}
+            ]
+        },
+        "layer":[
+            {
+            "mark": {"type": "circle", "color":"red"}
+            },
+        
+            {
+                "transform":[
+                    {
+                        "window":[{"op": "rank", "as":"ranking"}],
+                        "sort": [{"field": "brightness", "order": "descending"}]
+                    },
+                    {"filter":"datum.ranking == 1"},
+                    {
+            "calculate": "'Victoria State with record-breaking temperature: ' + datum['brightness']+'K'",
+                        "as":"text_annotation"
+                    }
+                ],
+                "mark": {"type": "text", "align": "left", "dx": 4},
+                "encoding":{
+                    "text":{"field":"text_annotation"}
+                }
+            }
+        ]
+    }
+]
+}
+    
