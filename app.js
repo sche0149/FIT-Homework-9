@@ -4,7 +4,7 @@ vegaEmbed('#vis1', viz, { "actions": false }).then(function (result) {
 
 }).catch(console.error);
 
-let viz1 = 'hw5_mapvis.json';
+let viz1 = 'bubble_weather.json';
 
 vegaEmbed('#vis2', viz1, { "actions": false }).then(function (result) {
 
