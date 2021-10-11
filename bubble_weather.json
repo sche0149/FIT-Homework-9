@@ -31,59 +31,83 @@
             "filter": "State_selection == null || datum.State == State_selection"
         }
     ],
-    "mark": "circle",
-    "encoding": {
-    "x": {
-        "field": "Rain(mm)",
-        "type": "quantitative",
-        "title": "Rainfall (mm)"
-    },
-    "y": {
-        "field": "Max Temp",
-        "type": "quantitative",
-        "title": "Max Temperature (Celsius)"
-    },
-    "color": {
-        "field": "State",
-        "type": "nominal",
-        "scale": {
-            "domain":[
-                "ACT",
-                "NSW",
-                "VIC",
-                "QLD",
-                "SA",
-                "WA",
-                "TAS",
-                "NT"
-            ]
-        }
-    },
-    "size": {
-        "field": "Max wind gust Spd - km/h",
-        "type": "quantitative",
-        "title": "Wind Speed (km/h)"
-    },
-    "tooltip": [
+    "layer":[
         {
-            "field": "State",
-            "type": "nominal"
-        },
-        {
-            "field": "Year",
-            "type": "temporal",
-            "title": "Date"
-        },
-        {
-            "field": "Max Temp",
-            "type": "quantitative",
-            "title": "Max Temperature (C)"
-        },
-        {
+        "mark": "circle",
+        "encoding": {
+        "x": {
             "field": "Rain(mm)",
             "type": "quantitative",
             "title": "Rainfall (mm)"
+        },
+        "y": {
+            "field": "Max Temp",
+            "type": "quantitative",
+            "title": "Max Temperature (Celsius)"
+        },
+        "color": {
+            "field": "State",
+            "type": "nominal",
+            "scale": {
+                "domain":[
+                    "ACT",
+                    "NSW",
+                    "VIC",
+                    "QLD",
+                    "SA",
+                    "WA",
+                    "TAS",
+                    "NT"
+                ]
+            }
+        },
+        "size": {
+            "field": "Max wind gust Spd - km/h",
+            "type": "quantitative",
+            "title": "Wind Speed (km/h)"
+        },
+        "tooltip": [
+            {
+                "field": "State",
+                "type": "nominal"
+            },
+            {
+                "field": "Year",
+                "type": "temporal",
+                "title": "Date"
+            },
+            {
+                "field": "Max Temp",
+                "type": "quantitative",
+                "title": "Max Temperature (C)"
+            },
+            {
+                "field": "Rain(mm)",
+                "type": "quantitative",
+                "title": "Rainfall (mm)"
+            }
+        ]
+        }
+        },
+
+            {
+                "transform":[
+                    {
+                        "window":[{"op": "rank", "as":"ranking"}],
+                        "sort": [{"field": "Rain(mm)", "order": "descending"}]
+                    },
+                    {"filter":"datum.ranking == 1"},
+                    {
+            "calculate": "'Heaviest rainfall: ' + datum['Rain(mm)']+'mm'",
+                        "as":"text_annotation"
+                    }
+                ],
+            
+                "mark":{"type": "text", "align": "left", "dx": 4},
+                "encoding": {
+                    "text": {"field":"text_annotation"}
+        }
+
         }
     ]
-    }
 }
