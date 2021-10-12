@@ -52,32 +52,12 @@
             "tooltip": [
             {"field": "brightness", "type": "quantitative", "title": "Temperature (K)"},
             {"field": "acq_date", "type": "temporal", "title": "Date"},
-            {"field": "daynight", "type": "nominal", "title": "Day/Night"},
-            {"field": "latitude", "type": "quantitative", "title": "Latitude"},
-            {"field": "longitude", "type": "quantitative", "title": "Longitude"}    
+            {"field": "daynight", "type": "nominal", "title": "Day/Night"}
             ]
         },
         "layer":[
             {
             "mark": {"type": "circle", "color":"red"}
-            },
-        
-            {
-                "transform":[
-                    {
-                        "window":[{"op": "rank", "as":"ranking"}],
-                        "sort": [{"field": "brightness", "order": "descending"}]
-                    },
-                    {"filter":"datum.ranking == 1"},
-                    {
-            "calculate": "'Victoria State with record-breaking temperature: ' + datum['brightness']+'K'",
-                        "as":"text_annotation"
-                    }
-                ],
-                "mark": {"type": "text", "align": "left", "dx": 4},
-                "encoding":{
-                    "text":{"field":"text_annotation"}
-                }
             }
         ]
     }

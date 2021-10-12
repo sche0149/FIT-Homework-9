@@ -21,7 +21,6 @@ body {
     margin: auto;
     padding: 50px;
     padding-top: 35px;
-    padding-right: 25px;
     margin-left: 25px;
 
 }
@@ -40,13 +39,11 @@ h1 {
 .description-left {
     width: 300px;
     padding-left: 20px;
-    padding-right: 25px;
     margin-left: 25px;
 }
 
 .pure-g {
     margin-bottom: 25px;
-    padding-right: 25px;
     margin-left: 25px;
 
 }
