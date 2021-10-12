@@ -2,9 +2,7 @@ title{
     text-align:center
 }
 
-.introduction { 
-    text-align: center;
-}
+
 
 .body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -54,4 +52,8 @@ h1 {
 
 .small-font {
     font-size: 10px;
+}
+
+.introduction { 
+    text-align: center;
 }
