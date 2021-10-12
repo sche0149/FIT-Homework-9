@@ -33,7 +33,7 @@
                 "min": 10,
                 "max": 13,
                 "step": 1,
-                "name": "Date: "
+                "name": "Month Selection: "
             }
         }
     ],
