@@ -1,10 +1,14 @@
+title{
+    text-align:center
+}
+
 .body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
     font-weight: 800;
-    text-align: center;
+    text-align:center
 }
 
 body {
