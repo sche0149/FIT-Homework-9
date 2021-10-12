@@ -2,6 +2,10 @@ title{
     text-align:center
 }
 
+.introduction { 
+    text-align: center;
+}
+
 .body {
     font-family: 'Source Sans Pro', sans-serif;
 }
