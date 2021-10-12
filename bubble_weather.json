@@ -4,7 +4,7 @@
     "height": 600,
     "title": "Australia Weather 2019-2020",
     "data": {
-        "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/aus_weather.csv"
+        "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/aus_weather_1920.csv"
     },
     "params":[
         {
@@ -24,11 +24,25 @@
                 ],
                 "name": "State Selection: "
             }
+        },
+        {
+            "name": "Month_selection",
+            "value": 10,
+            "bind":{
+                "input":"range",
+                "min": 10,
+                "max": 13,
+                "step": 1,
+                "name": "Date: "
+            }
         }
     ],
     "transform":[
         {
             "filter": "State_selection == null || datum.State == State_selection"
+        },
+        {
+            "filter": "datum.Month == Month_selection"
         }
     ],
     "layer":[
@@ -85,26 +99,13 @@
                 "field": "Rain(mm)",
                 "type": "quantitative",
                 "title": "Rainfall (mm)"
+            },
+            {
+                "field": "Max wind gust Spd - km/h",
+                "type": "quantitative",
+                "title": "Wind Speed (km/h)"
             }
         ]
-        }
-        },
-            {
-                "transform":[
-                    {
-                        "window":[{"op": "rank", "as":"ranking"}],
-                        "sort": [{"field": "Rain(mm)", "order": "descending"}]
-                    },
-                    {"filter":"datum.ranking == 1"},
-                    {
-            "calculate": "'Heaviest rainfall: ' + datum['Rain(mm)']+'mm'",
-                        "as":"text_annotation"
-                    }
-                ],
-            
-                "mark":{"type": "text", "align": "left", "dx": 4},
-                "encoding": {
-                    "text": {"field":"text_annotation"}
         }
         }
     ]
