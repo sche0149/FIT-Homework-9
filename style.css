@@ -4,6 +4,7 @@
 
 h1 {
     font-weight: 800;
+    text-align: center;
 }
 
 body {
@@ -32,7 +33,7 @@ h1 {
 
 }
 
-.description-right {
+.description-left {
     width: 300px;
     padding-left: 20px;
     padding-right: 25px;
