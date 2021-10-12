@@ -7,7 +7,7 @@ h1 {
 }
 
 body {
-    background-color: white;
+    background-color: antiquewhite;
 }
 
 .page {
@@ -16,6 +16,7 @@ body {
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+    padding-right: 25px;
 }
 
 .vis-container {
@@ -30,10 +31,12 @@ h1 {
 .description-right {
     width: 300px;
     padding-left: 20px;
+    padding-right: 25px;
 }
 
 .pure-g {
     margin-bottom: 25px;
+    padding-right: 25px;
 }
 
 .small-font {
