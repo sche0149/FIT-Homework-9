@@ -28,56 +28,28 @@
   </div>
 <!-- end pure grid group -->
 
-
  <div class="page">
 
     <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>States in Australia affected by the bushfires</h2>
-            <p>text</p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <div id="vis1" class="vis-container"></div>
-        </div>
+    <div class="section1">
+      <h2>States in Australia affected by the bushfires</h2>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>Australia's weather during the bushfire season</h2>
-            <p>text</p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <div id="vis2"  class="vis-container"></div>
-        </div>
+          <div id="vis1"></div>
+          <script type="text/javascript">
+            var spec2 = "./hw5_mapvis.json";
+            vegaEmbed('#vis1', spec2).then(function(result) {
+            }).catch(console.error);
+          </script>
+          <br>
+    <div class="section1">
+      <h2>Australia's weather during the bushfire season</h2>
     </div>
-    <!-- end pure grid group -->
-  
-    <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/sche0149" target="_blank">Rachel Chee</a></p>
-      </div>
-    </div>
-  
-
-  </div> <!-- end page -->
-   
-<script type="text/javascript">
-  var specVis1 = "./hw5_mapvis.json";
-  var specVis2= "./bubble_weather.json";
-
-  vegaEmbed('#vis1', specVis1, {"actions": false});
-  
-   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-</script>
+          <div id="vis2"></div>
+          <script type="text/javascript">
+            var spec3 = "./bubble_weather.json";
+            vegaEmbed('#vis2', spec3).then(function(result) {
+            }).catch(console.error);
+          </script>
+   </div>
 </body>
 </html>

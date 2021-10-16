@@ -11,14 +11,14 @@
     font-family: 'Source Sans Pro', sans-serif;
   }
   
-  .description h2,
+  description h2,
   h1 {
       text-align: center;
       background-color:rgb(253, 201, 132);
   margin-top: 0px;
   }
 
-  .description-left {
+  description-left {
     width: 300px;
     padding-left: 20px;
     margin-left: 25px;
@@ -29,10 +29,14 @@
     text-align: left;
   }
 
+  .section1 {
+    background-color:rgb(253, 201, 132);
+  }
+
   .introduction{ 
     text-align: center;
   }
-  
+
   body {
     background-color: antiquewhite;
   }
