@@ -11,7 +11,7 @@
     font-family: 'Source Sans Pro', sans-serif;
   }
   
-  description h2,
+  section1 h2,
   h1 {
       text-align: center;
       background-color:rgb(253, 201, 132);
@@ -30,6 +30,7 @@
   }
 
   .section1 {
+    text-align: center;
     background-color:rgb(253, 201, 132);
   }
 
