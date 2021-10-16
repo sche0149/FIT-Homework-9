@@ -1,58 +1,38 @@
-title{
-    text-align:center
-}
-
-.body {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.h1 {
-    font-weight: 800;
-    text-align:center;
-}
-
-body {
-    background-color: antiquewhite;
-}
-
-.page {
-    width: 850px;
-    background-color: antiquewhite;
+.vis-container {
+    width: 100%;
+  }
+  
+  .page {
+    width: 1024px;
+    background-color:white;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
-    margin-left: 25px;
-    text-align:center
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .description h2,
+  h1 {
+      text-align: center;
+      background-color:rgb(253, 201, 132);
+  margin-top: 0px;
+  }
 
-}
-
-.vis-container {
-    width: 60%;
-}
-
-.description h2,
-h1 {
-    margin-top: 0px;
-    margin-left: 25px;
-
-}
-
-.description-left {
+  .description-left {
     width: 300px;
     padding-left: 20px;
     margin-left: 25px;
 }
 
-.pure-g {
-    margin-bottom: 25px;
-    margin-left: 25px;
 
-}
+  p {
+    text-align: left;
+  }
 
-.small-font {
-    font-size: 10px;
-}
-
-.introduction { 
+  .introduction{ 
     text-align: center;
-}
+  }
+  
+  body {
+    background-color: antiquewhite;
+  }
