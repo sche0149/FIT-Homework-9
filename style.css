@@ -24,6 +24,12 @@
     margin-left: 25px;
 }
 
+    .description-right {
+      padding: 10px;
+    }
+    .description-left{
+      padding: 10px;
+    }
 
   p {
     text-align: left;
