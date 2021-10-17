@@ -10,10 +10,12 @@
         "bind": {
           "input": "select",
           "options": [
+             null,
             "2019",
             "2020"
           ],
           "labels":[
+            "Show All",
             "2019",
             "2020"
           ],
