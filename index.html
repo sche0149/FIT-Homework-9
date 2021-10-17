@@ -41,22 +41,32 @@
           </script>
           <br>
     <div class="section1">
-      <h2>Australia's weather during the bushfire season</h2>
+      <h2>Environmental Impact Caused by The Bushfire</h2>
     </div>
           <div id="vis2"></div>
           <script type="text/javascript">
-            var spec3 = "./bubble_weather.json";
+            var spec3 = "./hectacres_burned.json";
             vegaEmbed('#vis2', spec3).then(function(result) {
+            }).catch(console.error);
+          </script>
+          <br>
+    <div class="section1">
+      <h2>Australia's Weather during the bushfire season</h2>
+    </div>
+          <div id="vis3"></div>
+          <script type="text/javascript">
+            var spec4 = "./bubble_weather.json";
+            vegaEmbed('#vis3', spec4).then(function(result) {
             }).catch(console.error);
           </script>
           <br>
    <div class="section1">
       <h2>NSW Air Quality Index during the bushfire season</h2>
     </div>
-          <div id="vis3"></div>
+          <div id="vis4"></div>
           <script type="text/javascript">
-            var spec4 = "./bar_line_api.json";
-            vegaEmbed('#vis3', spec4).then(function(result) {
+            var spec5 = "./bar_line_api.json";
+            vegaEmbed('#vis4', spec5).then(function(result) {
             }).catch(console.error);
           </script>
    </div>
