@@ -42,12 +42,3 @@
     background-color: antiquewhite;
   }
 
-#right {
-    float: right;
-    width: 400px;
-  }
-
-#left {
-    float: left;
-    width: 600px;
-  }
