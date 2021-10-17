@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Hectacres of Forest Burned in 2019",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/sche0149/FIT-Homework-9/main/aus_state.json",
+      "format": {"type": "topojson", "feature": "gadm36_AUS_1"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.NAME_1",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/sche0149/FIT3179-Project2/main/fatalities_2019_2020_fires.csv"
+          },
+          "key": "state",
+          "fields": ["hectacres_burned"]}
+        }
+
+    ],
+    "projection": {"type": "equirectangular"},
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "hectacres_burned",
+        "type": "quantitative",
+        "legend":{"title": "Hectacres Burned"},
+        "scale": {
+            "domain":[1000000,3000000,5000000,7000000],
+            "scheme": "reds"
+        }
+      },
+      "tooltip": [
+        {"field": "properties.NAME_1", "type": "nominal", "title": "State"},
+        {"field": "hectacres_burned", "type": "quantitative", "title": "Hectacres Burned"}
+      ]
+    }
+  }
