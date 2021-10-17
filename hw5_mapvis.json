@@ -49,6 +49,11 @@
             "scale": {"scheme": "reds"},
             "legend": {"title": "Flame Temperature (K)"}
             },
+            "size": {
+                "field": "frp",
+                "type": "quantitative",
+                "legend":{"title": "Fire Radiative Power"}
+            },
             "tooltip": [
             {"field": "brightness", "type": "quantitative", "title": "Temperature (K)"},
             {"field": "acq_date", "type": "temporal", "title": "Date"},
