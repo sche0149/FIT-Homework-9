@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "New South Wales Air Quality Index 2019-2020",
+    "data": {"url": "https://raw.githubusercontent.com/sche0149/FIT3179-Project2/main/API_data.csv"},
+    "layer":[{    
+        "mark": "bar",
+        "encoding": {
+            "y": {"field": "Average PM",
+                "type": "quantitative",
+                "title": "Average PM2.5",
+                "scale": {"domain":[0,40]},
+                "axis":{"values": [0,5,10,15,20,25,30,35,40]}
+            },
+            "x": {"field": "Month",
+                "type": "ordinal",
+                "axis": {"labelAngle": 360},
+                "sort": {"order": null},
+                "title": "Month-Year"
+            },
+            "color": {"value": "#f58518"}
+        }},
+        {
+            "mark": "rule",
+            "encoding":{
+                "y": {"value": 420},
+                "color":{"value":"red"},
+                "size":{"value":2}
+            }
+            
+        }]
+}
