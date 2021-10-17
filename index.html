@@ -34,18 +34,17 @@
     <div class="section1">
       <h2>States in Australia affected by the bushfires</h2>
     </div>
-   
-   
-          <div id="vis1"></div>
-          <script type="text/javascript">
-            var spec2 = "./hw5_mapvis.json";
-            vegaEmbed('#vis1', spec2).then(function(result) {
-            }).catch(console.error);
-          </script>
-         <div id="textbox">
-           <p>text</p>
-         </div>
+          <div class="pure-u-2-3">
+          <div id="vis1"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <p>text</p>
+          </div>
+        </div>
+
          <br>
+   
     <div class="section1">
       <h2>Australia's weather during the bushfire season</h2>
     </div>
@@ -56,5 +55,12 @@
             }).catch(console.error);
           </script>
    </div>
+  
+     
+<script type="text/javascript">
+  var specVis1 = "./hw5_mapvis.json";
+  vegaEmbed('#vis1', specVis1, {"actions": false});
+</script>
+
 </body>
 </html>
