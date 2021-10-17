@@ -35,7 +35,7 @@
     {
         "transform": [
             {
-            "filter": "datum.Year == Year_selection"
+            "filter": "datum.Year != null || datum.Year == Year_selection"
             } 
         ],
         "encoding": {
