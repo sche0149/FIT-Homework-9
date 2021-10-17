@@ -10,7 +10,7 @@
         "bind": {
           "input": "select",
           "options": [
-             null,
+            null,
             "2019",
             "2020"
           ],
