@@ -42,12 +42,12 @@
     background-color: antiquewhite;
   }
 
-#textbox {
+#right {
     float: right;
     width: 400px;
   }
 
-#vis1 {
+#left {
     float: left;
-    width: 500px;
+    width: 600px;
   }
