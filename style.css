@@ -38,6 +38,8 @@
   }
 
   .introduction1{ 
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
     background-color:rgb(253, 201, 132);
   }
@@ -47,6 +49,8 @@
   }
 
 .description h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
     background-color:rgb(253, 201, 132);
   }
