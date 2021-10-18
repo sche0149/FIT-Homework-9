@@ -46,3 +46,7 @@
     background-color: antiquewhite;
   }
 
+.description h1 {
+    text-align: center;
+    background-color:rgb(253, 201, 132);
+  }
