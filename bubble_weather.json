@@ -22,6 +22,17 @@
                     "TAS",
                     "NT"
                 ],
+                "labels":[
+                    "Show All",
+                    "Australian Capital Territory",
+                    "New South Wales",
+                    "Victoria",
+                    "Queensland",
+                    "South Australia",
+                    "Western Australia",
+                    "Tasmania",
+                    "Northern Territory"
+                ],
                 "name": "State Selection: "
             }
         },
