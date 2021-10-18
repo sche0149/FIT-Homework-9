@@ -10,13 +10,7 @@
     padding-top: 35px;
     font-family: 'Source Sans Pro', sans-serif;
   }
-  
-  section1 h2,
-  h1 {
-      text-align: center;
-      background-color:rgb(253, 201, 132);
-  margin-top: 0px;
-  }
+ 
 
   description-left {
     width: 300px;
@@ -24,12 +18,15 @@
     margin-left: 25px;
 }
 
-    .description-right {
-      padding: 10px;
-    }
-    .description-left{
-      padding: 10px;
-    }
+.vis1{
+    width: 100%;
+    align-content: center;
+}
+
+.description-right {
+  padding: 20px;
+}
+    
 
   p {
     text-align: left;
